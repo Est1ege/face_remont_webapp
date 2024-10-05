@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Главная страница</title>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в наше приложение!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Это главная страница</h2>
+        <p>Здесь вы можете добавить любую информацию, которую хотите отобразить.</p>
+        <button onclick="openTelegramChat()">Написать в Telegram</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ваше приложение</p>
+    </footer>
+
+    <script>
+        function openTelegramChat() {
+            const chatUrl = "https://t.me/face_remont_kz_bot"
+            window.open(chatUrl, "_blank");
+        }
+
+        // Получение данных о пользователе
+        const queryString = window.location.hash.substring(1);
+        const userData = JSON.parse(atob(queryString));
+
+        console.log(userData); // Выводит данные о пользователе в консоль
+    </script>
+</body>
+</html>
