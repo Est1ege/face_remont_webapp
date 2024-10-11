@@ -20,7 +20,7 @@ btn1.addEventListener("click", function(){
         tg.MainButton.hide();
     }
     else {
-        tg.MainButton.setText("Вы выбрали 1 посещение");
+        tg.MainButton.setText("Вы выбрали абонимент");
         item = "1";
         tg.MainButton.show();
     }
@@ -31,7 +31,7 @@ btn2.addEventListener("click", function(){
         tg.MainButton.hide();
     }
     else {
-        tg.MainButton.setText("Вы выбрали 2 посещение");
+        tg.MainButton.setText("Вы выбрали 1 посещение");
         item = "2";
         tg.MainButton.show();
     }
@@ -41,7 +41,7 @@ btn3.addEventListener("click", function(){
         tg.MainButton.hide();
     }
     else {
-        tg.MainButton.setText("Вы выбрали 3 посещение");
+        tg.MainButton.setText("Вы выбрали 2 посещение");
         item = "3";
         tg.MainButton.show();
     }
@@ -51,7 +51,7 @@ btn4.addEventListener("click", function(){
         tg.MainButton.hide();
     }
     else {
-        tg.MainButton.setText("Вы выбрали 4 посещение");
+        tg.MainButton.setText("Вы выбрали 3 посещение");
         item = "4";
         tg.MainButton.show();
     }
@@ -61,7 +61,7 @@ btn5.addEventListener("click", function(){
         tg.MainButton.hide();
     }
     else {
-        tg.MainButton.setText("Вы выбрали 5 посещение");
+        tg.MainButton.setText("Вы выбрали 4 посещение");
         item = "5";
         tg.MainButton.show();
     }
@@ -72,11 +72,23 @@ btn6.addEventListener("click", function(){
         tg.MainButton.hide();
     }
     else {
-        tg.MainButton.setText("Вы выбрали 6 посещение");
+        tg.MainButton.setText("Вы выбрали 5 посещение");
         item = "6";
         tg.MainButton.show();
     }
 });
+
+btn6.addEventListener("click", function(){
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.setText("Вы выбрали 6 посещение");
+        item = "7";
+        tg.MainButton.show();
+    }
+});
+
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.sendData(item);
